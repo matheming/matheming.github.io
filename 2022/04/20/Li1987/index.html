@@ -5,8 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Asymptotic Optimality for C_p, C_L, CV and GCV, Matheming">
-    <meta name="description" content="This is a paper (Li1987) who proposed asymptotic optimality for $C_p$, $C_L$, CV and GCV.
-IntroLet $y&amp;#x3D;(y_1,\cdots,y">
+    <meta name="description" content="Asymptotic Opimality for Cp, C_L, CV and GCV">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -33,7 +32,11 @@ IntroLet $y&amp;#x3D;(y_1,\cdots,y">
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.1.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head>
 
 
 <body>
@@ -485,39 +488,72 @@ IntroLet $y&amp;#x3D;(y_1,\cdots,y">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>This is a paper (Li1987) who proposed asymptotic optimality for $C_p$, $C_L$, CV and GCV.</p>
-<h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><p>Let $y&#x3D;(y_1,\cdots,y_n)’$ be a vector of $n$ independent observations with unknown mean $\mu&#x3D;(\mu_1,\cdots,\mu_n)’$. Write<br>$$<br>y_i&#x3D;\mu_i+e_i,\ i&#x3D;1,\cdots,n,<br>$$<br>and assume that the random errors $e_i$ are i.i.d. with mean 0 and variance $\sigma^2$. Suppose that to estimate $\mu$, a class of linear estimators $\hat{\mu}(h)&#x3D;M_n(h)y$, indexed by $h{\in}H_n$, is proposed. Here $M_n(h)$ is an $n{\times}n$ matrix and $H_n$ is  just an index set. After observing the $y_i’$s, our concern is to select an $\hat{h}$ from $H_n$ so that the average squared error $L_n(\hat{h})&#x3D;||\mu-\hat(\hat{h})||^2&#x2F;n$ may be as small as possible ($||\cdot||$ denotes the Euclidean norm).</p>
-<p>$\textbf{Example 1}$ Model selection: Select the first $h$ variables to propose a linear model $y_i&#x3D;\sum_{j&#x3D;1}^hx_{ij}\beta_j+e_i$. Then $\hat{\mu}(h)&#x3D;X_h(X_h’X_h)X_h’y$ to estimate $\mu$. Here $H_n&#x3D;{1,2,\cdots,p_n}$. Our goal is to determine an appropriate model for the purpose of estimating $\mu$.</p>
-<p>$\textbf{Example 2}$ Nearest-neighbor nonparametric regression: Let $p$ be a natural number and $X$ be the compact closure of an open connected set in $\mathbb{R}^p$. Suppose $y_1,\cdots,y_n$ are observed at distinct levels $\mathbf{x}_1,\cdots,\mathbf{x}_n$, which become dense in $X$ as $n{\rightarrow}\infty$. Assume that $\mu_i&#x3D;f(\mathbf{x}_i)$ for an unknown continuous function $f$ on $X$. </p>
-<p>An $h$-nearest-neighbor estimate of $f$ at $\mathbf{x}<em>i$ depends only on the $h$ observations whose $\mathbf{x}$ values are closed to $\mathbf{x}<em>i$. Let $\mathbf{x}</em>{i(j)}$ denote the $j$-th nearest neighbor of $\mathbf{x}<em>i$. For a given weight function $w</em>{n,h}(\cdot)$, the $h$-nearest-neighbor estimate of $\mu_i$ is $\hat{\mu}<em>i(h)&#x3D;\sum</em>{j&#x3D;1}^hw</em>{n,h}(j)y_{i(j)}$. Here $H_n&#x3D;{1,2,\cdots,n}$.</p>
+                <h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><p>Let $y=(y_1,\cdots,y_n)’$ be a vector of $n$ independent observations with unknown mean $\mu=(\mu_1,\cdots,\mu_n)’$. Write</p>
+<script type="math/tex; mode=display">
+y_i=\mu_i+e_i,\ i=1,\cdots,n,</script><p>and assume that the random errors $e_i$ are i.i.d. with mean 0 and variance $\sigma^2$. Suppose that to estimate $\mu$, a class of linear estimators $\hat{\mu}(h)=M_n(h)y$, indexed by $h{\in}H_n$, is proposed. Here $M_n(h)$ is an $n{\times}n$ matrix and $H_n$ is  just an index set. After observing the $y_i’$s, our concern is to select an $\hat{h}$ from $H_n$ so that the average squared error $L_n(\hat{h})=||\mu-\hat(\hat{h})||^2/n$ may be as small as possible ($||\cdot||$ denotes the Euclidean norm).</p>
+<p>$\textbf{Example 1}$ Model selection: Select the first $h$ variables to propose a linear model $y_i=\sum_{j=1}^hx_{ij}\beta_j+e_i$. Then $\hat{\mu}(h)=X_h(X_h’X_h)X_h’y$ to estimate $\mu$. Here $H_n=\{1,2,\cdots,p_n\}$. Our goal is to determine an appropriate model for the purpose of estimating $\mu$.</p>
+<p>$\textbf{Example 2}$ Nearest-neighbor nonparametric regression: Let $p$ be a natural number and $X$ be the compact closure of an open connected set in $\mathbb{R}^p$. Suppose $y_1,\cdots,y_n$ are observed at distinct levels $\mathbf{x}_1,\cdots,\mathbf{x}_n$, which become dense in $X$ as $n{\rightarrow}\infty$. Assume that $\mu_i=f(\mathbf{x}_i)$ for an unknown continuous function $f$ on $X$. </p>
+<p>An $h$-nearest-neighbor estimate of $f$ at $\mathbf{x}_i$ depends only on the $h$ observations whose $\mathbf{x}$ values are closed to $\mathbf{x}_i$. </p>
+<p>Let $\mathbf{x}_{i(j)}$ denote the $j$-th nearest neighbor of $\mathbf{x}_i$. </p>
+<p>For a given weight function $w_{n,h}(\cdot)$, the $h$-nearest-neighbor estimate of $\mu_i$ is </p>
+<script type="math/tex; mode=display">
+\hat{\mu}_i(h)=\sum_{j=1}^h w_{n,h}(j) y_{i(j)}.</script><p>Here $H_n=\{1,2,\cdots,n\}$.</p>
 <p>For these two examples, the index set $H_n$ is discrete and has finite cardinality.</p>
 <p>Three well-known procedures of selecting $h$ will be studied:</p>
 <ul>
 <li><p>Mallows’ $C_L$ [Mallows (1973)]: Select $\hat{h}$, denoted by $\hat{h}_M$, that achieves</p>
-<p>$$<br>min_{h{\in}H_n}n^{-1}||y-\hat{\mu}(h)||^2+2\sigma^2n^{-1}trM_n(h).<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+min_{h{\in}H_n}n^{-1}||y-\hat{\mu}(h)||^2+2\sigma^2n^{-1}trM_n(h).</script></li>
 <li><p>GCV [Craven and Wahba (1979)]: Select $\hat{h}$, denoted by $\hat{h}_G$, that achieves</p>
-<p>$$<br>min_{h{\in}H_n}\frac{n^{-1}||y-\hat{\mu}(h)||^2}{(1-n^{-1}trM_n(h))^2}.<br>$$</p>
-</li>
-<li><p>(Delete-one) CV [Allen (1974), Stone (1974), Geisser(1975) and Wahba and Wold (1975)]: Select $\hat{h}$, denoted by $\hat{h}<em>C$, if we write the predictor of $y_i$ as $\hat{y}</em>{-i}&#x3D;\sum_{j&#x3D;1}^n\tilde{m}<em>{ij}(h)y_j$ with $\tilde{m}</em>{ii}(h)$ being zero. Then $\hat{h}_c$ achieves</p>
-<p>$$<br>min_{h{\in}H_n}||y-\widetilde{M}_n(h)y||^2,<br>$$<br>where $\widetilde{M}<em>n(h)$ is an $n{\times}n$ matrix with $\tilde{m}</em>{ij}(h)$ as the $ij$th entry.</p>
+<script type="math/tex; mode=display">
+min_{h{\in}H_n}\frac{n^{-1}||y-\hat{\mu}(h)||^2}{(1-n^{-1}trM_n(h))^2}.</script></li>
+<li><p>(Delete-one) CV [Allen (1974), Stone (1974), Geisser(1975) and Wahba and Wold (1975)]: Select $\hat{h}$, denoted by $\hat{h}_C$, if we write the predictor of $y_i$ as $\hat{y}_{-i}=\sum_{j=1}^n\tilde{m}_{ij}(h)y_j$ with $\tilde{m}_{ii}(h)$ being zero. Then $\hat{h}_c$ achieves</p>
+<script type="math/tex; mode=display">
+min_{h{\in}H_n}||y-\widetilde{M}_n(h)y||^2,</script><p>where $\widetilde{M}_n(h)$ is an $n{\times}n$ matrix with $\tilde{m}_{ij}(h)$ as the $ij$th entry.</p>
 </li>
 </ul>
-<p>$\textbf{Example 1}$ Model selection (continued): Since $M_n(h)$ is a projection with rank $h$, the $C_L$ reduces to $C_p$ criterion. And GCV happens to take a form almost identical to another procedure $S_p$ proposed in Hocking (1976), and Thompson (1978). For delete-one CV, $y_i$ is predicted by $\hat{y}<em>{-i}&#x3D;\mathbf{x}<em>i’(X</em>{h,-i}’X</em>{h,-i})^{-1}X_{h,-i}’y_{-i}$, where $y_{-i}$ is the subvector of $y$ with the $i$th coordinate deleted. Let $D_n(h)$ be an $n{\times}n$ diagonal matrix with the $i$-th diagonal element equal to $(1-m_{ii}(h))^{-1}$. Then the delete-one estimate of $\mu$ takes the form $\widetilde{M}_n(h)y$ with<br>$$<br>\widetilde{M}_n(h)&#x3D;D_n(h)(M_n(h)-I)+I.<br>$$</p>
-<p>$\textbf{Example 2}$ …</p>
-<p>The primary goal of this paper is to demonstrate that under reasonable conditions, these procedures are asymptotically optimal in the sense that<br>$$<br>\frac{L_n(\hat{h})}{inf_{h{\in}H_n}L_n(h)}{\rightarrow}1,\ \text{in probability}.<br>$$</p>
-<h2 id="C-p-and-C-L"><a href="#C-p-and-C-L" class="headerlink" title="$C_p$ and $C_L$"></a>$C_p$ and $C_L$</h2><p>Let $\mathbf{e}&#x3D;(e_1,\cdots,e_n)’$ and $A_n(h)&#x3D;I-M_n(h)$. First, observe the identity</p>
-<p>$$<br>n^{-1}||y-\hat{\mu}(h)||^2+2\sigma^2n^{-1}trM_n(h)\<br>&#x3D;n^{-1}||\mathbf{e}||^2+L_n(h)+2n^{-1}&lt;\mathbf{e},A_n(h)\mu&gt;\<br>+2n^{-1}(\sigma^2trM_n(h)-&lt;\mathbf{e},M_n(h)\mathbf{e}&gt;).<br>$$</p>
-<p>Since $||\mathbf{e}||^2$ is dependent of $h$, $\hat{h}_M$ also minimizes<br>$$<br>L_n(h)+2n^{-1}&lt;\mathbf{e},A_n(h)\mu&gt;<br>+2n^{-1}(\sigma^2trM_n(h)-&lt;\mathbf{e},M_n(h)\mathbf{e}&gt;)<br>$$<br>over $h{\in}H_n$. If we can show that the last two terms are negligible compared with $L_n(h)$ uniformly for any $h{\in}H_n$ then the asymptotic optimality property is established for $\hat{h}&#x3D;\hat{h}<em>M$. More precisely, it remains to show that in probability,<br>$$<br>\begin{equation}<br>  sup</em>{h{\in}H_n}n^{-1}&lt;\mathbf{e},A_n(h)\mu&gt;&#x2F;R_n(h){\rightarrow}0,<br>\end{equation}<br>$$</p>
-<p>$$<br>\begin{equation}<br>sup_{h{\in}H_n}n^{-1}|\sigma^2trM_n(h)-&lt;\mathbf{e},M_n(h)\mathbf{e}&gt;|&#x2F;R_n(h){\rightarrow}0<br>\end{equation}<br>$$</p>
-<p>$$<br>\begin{equation}<br>sup_{h{\in}H_n}|L_n(h)&#x2F;R_n(h)-1|{\rightarrow}0.<br>\end{equation}<br>$$</p>
-<p>$\textbf{Theorem 2.1.}$ Assume (A.1)-(A.3) hold. Where<br>$$<br>\begin{aligned}<br>&amp;(A.1)\ \ \ \ lim_{n{\rightarrow}\infty}sup_{h{\in}H_n}\lambda(M_n(h))&lt;\infty\<br>&amp;(A.2)\ \ \ \ Ee_1^{4m}&lt;\infty\<br>&amp;(A.3)\ \ \ \ \sum_{h{\in}H_n}(nR_n(h))^{-m}{\rightarrow}0,<br>\end{aligned}<br>$$<br>here $R_n(h)&#x3D;EL_n(h)$ and $\lambda(M_n(h))$ is the maximum singular value of $M_n(h)$. Then $C_L$ is asymptotic optimal.</p>
-<h3 id="2-1-Model-Selection-Example-1"><a href="#2-1-Model-Selection-Example-1" class="headerlink" title="2.1. Model Selection-Example 1"></a>2.1. Model Selection-Example 1</h3><p>(A.1) holds obviously. To see that<br>$$<br>(A.3’)\ \ \ \ inf_{h{\in}H_n}nR_n(h){\rightarrow}\infty<br>$$<br>implies (A.3) with $m&#x3D;2$, observe that</p>
-<!-- ![](p1.png) -->
-<p>$$<br>nR_n(h)&#x3D;||A_n(h)\mu||^2+h\sigma^2{\ge}h\sigma^2.<br>$$<br>Hence for any fixed natural number $k$<br>$$<br>\begin{aligned}<br>  \sum_{h{\in}H_n}(nR_n(h))^{-2}&amp;{\le}\sum_{h&#x3D;1}^k(nR_n(h))^{-2}+\sigma^{-4}\sum_{h&#x3D;k+1}^{p_n}h^{-2}\<br>  &amp;{\le}k(inf_{h{\in}H_n}nR_n(h))^{-2}+\sigma^{-4}\sum_{h&#x3D;k+1}^{\infty}h^{-2}.<br>\end{aligned}<br>$$<br>This proves (A.3).</p>
-<p>$\textbf{Corollary 2.1.}$ For the model-selection setting, $C_p$ is asymptotic optimal if (A.3’) and (A.2) with $m&#x3D;2$ are satisfied.</p>
+<p>$\textbf{Example 1}$ Model selection (continued): Since $M_n(h)$ is a projection with rank $h$, the $C_L$ reduces to $C_p$ criterion. And GCV happens to take a form almost identical to another procedure $S_p$ proposed in Hocking (1976), and Thompson (1978). For delete-one CV, $y_i$ is predicted by $\hat{y}_{-i}=\mathbf{x}_i’(X_{h,-i}’X_{h,-i})^{-1}X_{h,-i}’y_{-i}$, where $y_{-i}$ is the subvector of $y$ with the $i$th coordinate deleted. Let $D_n(h)$ be an $n{\times}n$ diagonal matrix with the $i$-th diagonal element equal to $(1-m_{ii}(h))^{-1}$. Then the delete-one estimate of $\mu$ takes the form $\widetilde{M}_n(h)y$ with</p>
+<script type="math/tex; mode=display">
+\widetilde{M}_n(h)=D_n(h)(M_n(h)-I)+I.</script><p>$\textbf{Example 2}$ …</p>
+<p>The primary goal of this paper is to demonstrate that under reasonable conditions, these procedures are asymptotically optimal in the sense that </p>
+<script type="math/tex; mode=display">
+\frac{L_n(\hat{h})}{inf_{h{\in}H_n}L_n(h)}{\rightarrow}1,\ \text{in probability}.</script><h2 id="C-p-and-C-L"><a href="#C-p-and-C-L" class="headerlink" title="$C_p$ and $C_L$"></a>$C_p$ and $C_L$</h2><p>Let $\mathbf{e}=(e_1,\cdots,e_n)’$ and $A_n(h)=I-M_n(h)$. First, observe the identity</p>
+<script type="math/tex; mode=display">
+n^{-1}||y-\hat{\mu}(h)||^2+2\sigma^2n^{-1}trM_n(h)\\
+=n^{-1}||\mathbf{e}||^2+L_n(h)+2n^{-1}<\mathbf{e},A_n(h)\mu>\\
++2n^{-1}(\sigma^2trM_n(h)-<\mathbf{e},M_n(h)\mathbf{e}>).</script><p>Since $||\mathbf{e}||^2$ is dependent of $h$, $\hat{h}_M$ also minimizes</p>
+<script type="math/tex; mode=display">
+L_n(h)+2n^{-1}<\mathbf{e},A_n(h)\mu>
++2n^{-1}(\sigma^2trM_n(h)-<\mathbf{e},M_n(h)\mathbf{e}>)</script><p>over $h{\in}H_n$. If we can show that the last two terms are negligible compared with $L_n(h)$ uniformly for any $h{\in}H_n$ then the asymptotic optimality property is established for $\hat{h}=\hat{h}_M$. More precisely, it remains to show that in probability,</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+  sup_{h{\in}H_n}n^{-1}<\mathbf{e},A_n(h)\mu>/R_n(h){\rightarrow}0,
+\end{equation}</script><script type="math/tex; mode=display">
+\begin{equation}
+sup_{h{\in}H_n}n^{-1}|\sigma^2trM_n(h)-<\mathbf{e},M_n(h)\mathbf{e}>|/R_n(h){\rightarrow}0
+\end{equation}</script><script type="math/tex; mode=display">
+\begin{equation}
+sup_{h{\in}H_n}|L_n(h)/R_n(h)-1|{\rightarrow}0.
+\end{equation}</script><p>$\textbf{Theorem 2.1.}$ Assume (A.1)-(A.3) hold. Where</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&(A.1)\ \ \ \ lim_{n{\rightarrow}\infty}sup_{h{\in}H_n}\lambda(M_n(h))<\infty\\
+&(A.2)\ \ \ \ Ee_1^{4m}<\infty\\
+&(A.3)\ \ \ \ \sum_{h{\in}H_n}(nR_n(h))^{-m}{\rightarrow}0,
+\end{aligned}</script><p>here $R_n(h)=EL_n(h)$ and $\lambda(M_n(h))$ is the maximum singular value of $M_n(h)$. Then $C_L$ is asymptotic optimal.</p>
+<h3 id="2-1-Model-Selection-Example-1"><a href="#2-1-Model-Selection-Example-1" class="headerlink" title="2.1. Model Selection-Example 1"></a>2.1. Model Selection-Example 1</h3><p>(A.1) holds obviously. To see that </p>
+<script type="math/tex; mode=display">
+(A.3')\ \ \ \ inf_{h{\in}H_n}nR_n(h){\rightarrow}\infty</script><p>implies (A.3) with $m=2$, observe that<br><!-- ![](p1.png) --></p>
+<script type="math/tex; mode=display">
+nR_n(h)=||A_n(h)\mu||^2+h\sigma^2{\ge}h\sigma^2.</script><p>Hence for any fixed natural number $k$</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+  \sum_{h{\in}H_n}(nR_n(h))^{-2}&{\le}\sum_{h=1}^k(nR_n(h))^{-2}+\sigma^{-4}\sum_{h=k+1}^{p_n}h^{-2}\\
+  &{\le}k(inf_{h{\in}H_n}nR_n(h))^{-2}+\sigma^{-4}\sum_{h=k+1}^{\infty}h^{-2}.
+\end{aligned}</script><p>This proves (A.3).</p>
+<p>$\textbf{Corollary 2.1.}$ For the model-selection setting, $C_p$ is asymptotic optimal if (A.3’) and (A.2) with $m=2$ are satisfied.</p>
 <p>When $\sigma^2$ is unknown, we should replace it by an estimate.</p>
-<p>$\textbf{Corollary 2.2.}$ If $\sigma^2$ is replaced by a consistent estimate $\hat{\sigma}^2$, then $C_p$ is still asymptotically optimal under (A.3’) and (A.2) with $m&#x3D;2$.</p>
+<p>$\textbf{Corollary 2.2.}$ If $\sigma^2$ is replaced by a consistent estimate $\hat{\sigma}^2$, then $C_p$ is still asymptotically optimal under (A.3’) and (A.2) with $m=2$.</p>
 <p>The other properties for GCV and delete-one CV $\textbf{TBC}$.</p>
 <p>At last, we prove Theorem 2.1. </p>
 <!-- ![](p2.png) -->
@@ -659,7 +695,7 @@ IntroLet $y&amp;#x3D;(y_1,\cdots,y">
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Asymptotic Opimality for Cp, C_L, CV and GCV
                         
                     </div>
                     <div class="publish-info">
