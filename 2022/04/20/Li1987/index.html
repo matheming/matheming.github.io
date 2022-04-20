@@ -543,7 +543,7 @@ sup_{h{\in}H_n}|L_n(h)/R_n(h)-1|{\rightarrow}0.
 \end{aligned}</script><p>here $R_n(h)=EL_n(h)$ and $\lambda(M_n(h))$ is the maximum singular value of $M_n(h)$. Then $C_L$ is asymptotic optimal.</p>
 <h3 id="2-1-Model-Selection-Example-1"><a href="#2-1-Model-Selection-Example-1" class="headerlink" title="2.1. Model Selection-Example 1"></a>2.1. Model Selection-Example 1</h3><p>(A.1) holds obviously. To see that </p>
 <script type="math/tex; mode=display">
-(A.3')\ \ \ \ inf_{h{\in}H_n}nR_n(h){\rightarrow}\infty</script><p>implies (A.3) with $m=2$, observe that<br><!-- ![](p1.png) --></p>
+(A.3')\ \ \ \ inf_{h{\in}H_n}nR_n(h){\rightarrow}\infty</script><p>implies (A.3) with $m=2$, observe that<br><img src="https://github.com/matheming/Photos/blob/main/p1.png" alt=""></p>
 <script type="math/tex; mode=display">
 nR_n(h)=||A_n(h)\mu||^2+h\sigma^2{\ge}h\sigma^2.</script><p>Hence for any fixed natural number $k$</p>
 <script type="math/tex; mode=display">
@@ -556,7 +556,7 @@ nR_n(h)=||A_n(h)\mu||^2+h\sigma^2{\ge}h\sigma^2.</script><p>Hence for any fixed 
 <p>$\textbf{Corollary 2.2.}$ If $\sigma^2$ is replaced by a consistent estimate $\hat{\sigma}^2$, then $C_p$ is still asymptotically optimal under (A.3’) and (A.2) with $m=2$.</p>
 <p>The other properties for GCV and delete-one CV $\textbf{TBC}$.</p>
 <p>At last, we prove Theorem 2.1. </p>
-<!-- ![](p2.png) -->
+<p><img src="https://github.com/matheming/Photos/blob/main/p2.png" alt=""></p>
 
                 
             </div>
@@ -896,11 +896,11 @@ nR_n(h)=||A_n(h)\mu||^2+h\sigma^2{\ge}h\sigma^2.</script><p>Hence for any fixed 
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2022</span>
+                <span id="year">2022</span>
             
             <a href="/about" target="_blank">Matheming</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
@@ -926,6 +926,60 @@ nR_n(h)=||A_n(h)\mu||^2+h\sigma^2{\ge}h\sigma^2.</script><p>Hence for any fixed 
             <br>
 
             <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2022";
+                        var startMonth = "4";
+                        var startDate = "19";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
             
             <br>
             
