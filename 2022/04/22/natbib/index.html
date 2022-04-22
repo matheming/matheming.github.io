@@ -489,10 +489,24 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="Change-Form"><a href="#Change-Form" class="headerlink" title="Change Form"></a>Change Form</h2><p>When I used <code>natbib</code> for reference in Latex, my code is</p>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>[round,authoryear]&#123;natbib&#125;</span><br><span class="line"><span class="keyword">\bibliographystyle</span>&#123;plainnat&#125;</span><br></pre></td></tr></table></figure>
-<p>I met a problem that the final reference list was as<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Tony Stack,...</span><br></pre></td></tr></table></figure><br>i.e. the list used full name, but I wanted an abbreviation of the first name like<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stack, T. ...</span><br></pre></td></tr></table></figure></p>
-<p>The solution is to change the file <code>plainnat.bst</code>, we can copy the file to our work directionary, and rename it like <code>myplainnat.bst</code>, then open it and find<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FUNCTION &#123;format.names&#125;</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">    &#123; s nameptr &quot;&#123;f.~&#125;&#123;vv~&#125;&#123;ll&#125;&#123;~jj&#125;&quot; format.name$ &#x27;t :=</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>change it to<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; s nameptr &quot;&#123;vv~&#125;&#123;ll&#125;&#123;, f.&#125;&#123;~jj&#125;&quot; format.name$ &#x27;t :=</span><br></pre></td></tr></table></figure></p>
-<p>Then change our style like<br><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\bibliographystyle</span>&#123;myplainnat&#125;</span><br></pre></td></tr></table></figure></p>
+<pre><code class="lang-latex">\usepackage[round,authoryear]&#123;natbib&#125;
+\bibliographystyle&#123;plainnat&#125;
+</code></pre>
+<p>I met a problem that the final reference list was as </p>
+<pre><code>Tony Stack,...
+</code></pre><p>i.e. the list used full name, but I wanted an abbreviation of the first name like</p>
+<pre><code>Stack, T. ...
+</code></pre><p>The solution is to change the file <code>plainnat.bst</code>, we can copy the file to our work directionary, and rename it like <code>myplainnat.bst</code>, then open it and find </p>
+<pre><code>FUNCTION &#123;format.names&#125;
+&#123;
+    ...
+    &#123; s nameptr &quot;&#123;f.~&#125;&#123;vv~&#125;&#123;ll&#125;&#123;~jj&#125;&quot; format.name$ &#39;t :=
+&#125;
+</code></pre><p>change it to</p>
+<pre><code>&#123; s nameptr &quot;&#123;vv~&#125;&#123;ll&#125;&#123;, f.&#125;&#123;~jj&#125;&quot; format.name$ &#39;t :=
+</code></pre><p>Then change our style like</p>
+<pre><code class="lang-latex">\bibliographystyle&#123;myplainnat&#125;
+</code></pre>
 <p>Finally, remember to delete compiling files like <code>.aux</code> and <code>.out</code>, compile our main latex file, it works!</p>
 
                 
@@ -754,6 +768,12 @@
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
+<!-- 代码块折行 -->
+
+    <style type="text/css">
+    code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+    </style>
+    
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <div class="toc-widget card" style="background-color: white;">
