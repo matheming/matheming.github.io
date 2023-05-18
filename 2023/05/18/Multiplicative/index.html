@@ -497,7 +497,32 @@
             <div id="articleContent">
                 <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Multiplicative models, which describe the distribution of a positive response and have a form of</p>
 <script type="math/tex; mode=display">
-Y = \exp(X\beta)\epsilon</script><p>where $\Pr(\epsilon&gt;0)=1$, are widely utilized in economic and bussiness.</p>
+\begin{align}
+  Y = \exp(X\beta)\epsilon 
+\end{align}</script><p>where $\Pr(\epsilon&gt;0)=1$, are widely utilized in economic and bussiness.</p>
+<h1 id="Estimation-and-Inference"><a href="#Estimation-and-Inference" class="headerlink" title="Estimation and Inference"></a>Estimation and Inference</h1><h2 id="Absolute-Error"><a href="#Absolute-Error" class="headerlink" title="Absolute Error"></a>Absolute Error</h2><p>Under some special cases, the multiplicative model can be transformed into common linear regression by taking a logarithm. Then the parameters can be estimated by least square method.</p>
+<h2 id="Realtive-Error"><a href="#Realtive-Error" class="headerlink" title="Realtive Error"></a>Realtive Error</h2><p>Since 2010, there are a lot of literatures about the parameter estimation and inference published. Most of papers focus on relative errors since relative errors can be transformed into absolute errors under multiplicative modes. For example, Chen et. al. (2010) proposed LARE estimation and Chen et. al. (2016) proposed LPRE estimation based on (1). There are also some estimation methods based on relative errors to estimate the parameters under multiplicative partially linear model and single-index model which have a change in the term $\exp(X\beta)$.</p>
+<h2 id="Maximum-Likelihood-Estimation"><a href="#Maximum-Likelihood-Estimation" class="headerlink" title="Maximum Likelihood Estimation"></a>Maximum Likelihood Estimation</h2><p>Other methods like MLE and moment methods are also developed to estimate parameters.</p>
+<h1 id="A-Particular-Model"><a href="#A-Particular-Model" class="headerlink" title="A Particular Model"></a>A Particular Model</h1><p>If we assume $\epsilon{\sim}lognormal(0,\sigma^2)$, the logarithm transformation of (1) will be a linear model with normal distributed residual. In this case, the maximum likelihood estimator of (1) is equivalent the MLE after logarithm. Suppose the covariate dimension is $p$ and the sample size is $n$, and the design matrix is $X$, then the MLE of $\beta$ is</p>
+<script type="math/tex; mode=display">
+\hat{\beta}=(X^\top X)^{-1}X^\top \widetilde{Y},</script><p>where $\widetilde{Y}$ is the logarithm of $Y$. Let $\hat{\widetilde{Y}}=X\hat{\beta}$. The MLE of $\sigma^2$ is</p>
+<script type="math/tex; mode=display">
+\hat{\sigma}^2 = \frac{(\hat{\widetilde{Y}}-Y)^\top(\hat{\widetilde{Y}}-Y)}{n}.</script><p>The estimators are same as the MLE of linear models and similar to the least square estimators of linear model. Hence it share some good properties.</p>
+<p>The expectation under this assumption is</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+  \mathbb{E}Y = \exp(X\beta+\sigma^2/2)
+\end{aligned}</script><h1 id="Prediction"><a href="#Prediction" class="headerlink" title="Prediction"></a>Prediction</h1><p>There are some kinds of predictions of the multiplicative models. Three major predicitons are</p>
+<script type="math/tex; mode=display">
+\begin{align}
+  \hat{Y} &= \exp(X\hat{\beta}),\\
+  \hat{Y} &= \exp(X\hat{\beta}+\hat{\sigma}^2/2),\\
+  \hat{Y} &= \exp(X\hat{\beta}-3\hat{\sigma}^2/2).
+\end{align}</script><p>The equation (2) is natural and straightforward. The equation (3) bases on the expectation. The equation (4) is based on Park and Stefanski (1998) where the authors claim that for mean square relative error the best prediction is </p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+  \hat{Y}=\frac{\mathbb{E}[Y^{-1}|X]}{\mathbb{E}[Y^{-2}|X]}.
+\end{aligned}</script><p>There is no evidence to suggest which of the three is better.</p>
 
                 
             </div>
