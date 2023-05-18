@@ -493,7 +493,7 @@
 </thead>
 <tbody>
 <tr>
-<td>$\mathop{argmin}\limits_\theta$</td>
+<td>$\mathop{\arg\min}\limits_\theta$</td>
 <td><code>\mathop&#123;\arg\min&#125;\limits_\theta</code></td>
 </tr>
 </tbody>
@@ -504,6 +504,14 @@
 <p>If we want to give serial number to the equation in Appendix like <code>(A.1)</code>, we can use<br><pre class="language-latex" data-language="latex"><code class="language-latex"><span class="token function selector">\setcounter</span><span class="token punctuation">&#123;</span>equation<span class="token punctuation">&#125;</span><span class="token punctuation">&#123;</span>0<span class="token punctuation">&#125;</span><span class="token comment">%set start number 0</span>
 <span class="token function selector">\renewcommand</span><span class="token function selector">\theequation</span><span class="token punctuation">&#123;</span>A.<span class="token function selector">\arabic</span><span class="token punctuation">&#123;</span>equation<span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span class="token comment">% set format as A.1</span></code></pre></p>
 <h2 id="Boldface"><a href="#Boldface" class="headerlink" title="Boldface"></a>Boldface</h2><p>In $\LaTeX$, we use <code>\textbf&#123;text&#125;</code> to add black to $\textbf{text}$, and use <code>\mathbf&#123;t&#125;</code> to add black to mathematical symbol, and use <code>\boldsymbol&#123;\pi&#125;</code> and <code>\usepackage&#123;amsmath&#125;</code> to blacken Greek letter.</p>
+<pre class="language-Latex" data-language="Latex"><code class="language-Latex">\usepackage&#123;caption&#125;
+\caption*&#123;Title&#125;</code></pre>
+<h2 id="PDF-Figure"><a href="#PDF-Figure" class="headerlink" title="PDF Figure"></a>PDF Figure</h2><pre class="language-Latex" data-language="Latex"><code class="language-Latex">\begin&#123;figure&#125;
+\centering
+\includegraphics[width&#x3D;120mm]&#123;Fig2.pdf&#125;
+\caption&#123;Title&#125;
+\label&#123;Fig2&#125;
+\end&#123;figure&#125;</code></pre>
 
                 
             </div>
@@ -617,48 +625,54 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/04/24/Latex_tips/">
+                <a href="/2022/08/16/AIC/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Tips of Latex">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="AIC and BIC">
                         
-                        <span class="card-title">Tips of Latex</span>
+                        <span class="card-title">AIC and BIC</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            SOme tips for the usage of Latex
+                            The Form of AIC and BIC Under Linear Regression Model
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-24
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-08-16
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Latex/" class="post-category">
-                                    Latex
+                            <a href="/categories/Model-Selection/" class="post-category">
+                                    Model Selection
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Latex/">
-                        <span class="chip bg-color">Latex</span>
+                    <a href="/tags/Mathematical-Statistics/">
+                        <span class="chip bg-color">Mathematical Statistics</span>
+                    </a>
+                    
+                    <a href="/tags/Model-Selection/">
+                        <span class="chip bg-color">Model Selection</span>
+                    </a>
+                    
+                    <a href="/tags/Model-Averaging/">
+                        <span class="chip bg-color">Model Averaging</span>
                     </a>
                     
                 </div>
@@ -850,7 +864,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2022</span>
+                <span id="year">2022-2023</span>
             
             <a href="/about" target="_blank">Matheming</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
