@@ -7,7 +7,7 @@
 # server process.
 
 # Basic Site Settings
-locale                   : "Hefei China"
+locale                   : "USTC"
 title                    : "Master"
 title_separator          : "-"
 name                     : &name "Jianming Wu"
@@ -21,12 +21,12 @@ repository               : "matheming/matheming.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  # avatar           : "profile.png"
+  avatar           : # "profile.png"
   name             : "Jaime Ng"
-  # pronouns         : # example: "she/her"  
-  # bio              : "Short biography for the left-hand sidebar"
+  pronouns         : # example: "she/her"  
+  bio              : # "Short biography for the left-hand sidebar"
   location         : "China"
-  # employer         : "Red Brick University"
+  employer         : # "Red Brick University"
   # uri              : # URL
   email            : "matheming@mail.ustc.edu.cn" 
 
