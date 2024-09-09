@@ -7,6 +7,6 @@ excerpt: 'Relative errors are widely employed in sales forecasting and other dom
 date: 2024-09-09
 venue: 'Journal of System Science and Mathematical Science Chinese Series'
 slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-paperurl: '[http://academicpages.github.io/files/paper1.pdf](https://sysmath.cjoe.ac.cn/jweb_xtkxysx/CN/10.12345/jssms240045)'
+paperurl: 'https://sysmath.cjoe.ac.cn/jweb_xtkxysx/CN/10.12345/jssms240045'
 citation: 'WU Jianming, SUN Yuying, ZHANG Xinyu, LI Na. A Model Averaging Method Based on Relative Error Under Homoscedasticity. Journal of System Science and Mathematical Science Chinese Series, 2024 https://doi.org/10.12345/jssms240045'
 ---
