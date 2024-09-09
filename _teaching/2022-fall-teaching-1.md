@@ -1,5 +1,5 @@
 ---
-title: "Teaching Assistant"
+title: "TA of Probability and Mathematical Statistics"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2022-fall-teaching-1
