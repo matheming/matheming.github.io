@@ -7,11 +7,11 @@
 # server process.
 
 # Basic Site Settings
-locale                   : "USTC"
-title                    : "Jamie's Personal Website"
+locale                   : "en-US"
+title                    : "Jianming Wu"
 title_separator          : "-"
 name                     : &name "Jianming Wu"
-description              : &description "Statistics&Movie"
+description              : &description "PhD candidate in statistics at USTC working on model averaging, LLM, and interval data."
 url                      : https://matheming.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "matheming/matheming.github.io"
@@ -22,12 +22,12 @@ repository               : "matheming/matheming.github.io"
 author:
   # Biographic information
   avatar           : "profile.jpg"
-  name             : "Jaime Ng (吴建明)"
+  name             : "Jianming Wu"
   pronouns         : # example: "she/her"  
-  bio              : # "Short biography for the left-hand sidebar"
+  bio              : "PhD candidate in statistics at USTC. Interested in model averaging, LLM, and interval data."
   location         : "China"
-  employer         : # "Red Brick University"
-  # uri              : # URL
+  employer         : "University of Science and Technology of China"
+  uri              : "https://matheming.github.io"
   email            : "matheming@mail.ustc.edu.cn" 
 
   # Academic websites
@@ -43,7 +43,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "matheming"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
