@@ -17,7 +17,7 @@ redirect_from:
         and interval data.
       </p>
       <div class="academic-hero__actions">
-        <a class="btn btn--large" href="/publications/">Publications</a>
+        <a class="btn btn--large" href="/publications/">Research</a>
         <a class="btn btn--outline btn--large" href="/cv/">Curriculum Vitae</a>
       </div>
     </div>
@@ -53,7 +53,7 @@ redirect_from:
     <div class="academic-section__content academic-links">
       <a href="/publications/">
         <span class="academic-links__number">01</span>
-        <span><strong>Publications</strong><small>Papers and current academic work</small></span>
+        <span><strong>Research</strong><small>Papers and current academic work</small></span>
         <span class="academic-links__arrow">→</span>
       </a>
       <a href="/talks/">

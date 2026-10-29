@@ -12,4 +12,13 @@ excerpt: "A record of invited talks, presentations, and research communication."
 
 {% endif %}
 
-<p class="empty-state">No talks are listed here yet.</p>
+{% for post in site.talks reversed %}
+  <div class="list__item">
+    <article class="archive__item">
+      <h2 class="archive__item-title"><a href="{{ post.paperurl | default: post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p class="archive__item-meta">{{ post.display_date }} &middot; {{ post.location }}</p>
+    </article>
+  </div>
+{% else %}
+  <p class="empty-state">No talks are listed here yet.</p>
+{% endfor %}
